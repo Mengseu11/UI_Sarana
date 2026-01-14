@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile &amp; Order History - Kimmy Cosmetic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<!-- <svg class="w-8 h-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg> -->
+</div>
+<!-- <h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Kimmy Cosmetic</h1> -->
+ <a class="flex items-center gap-2 group" href="../kimmy_cosmetic_home_page_2/index.html">
+<span class="material-symbols-outlined text-3xl text-primary transition-transform group-hover:rotate-180 duration-700">flare</span>
+<h1 class="text-[#181114] dark:text-white text-2xl font-extrabold tracking-tighter uppercase">Kimmy<span class="font-light text-primary">Cosmetic</span></h1>
+</a>
+</div>
+<div class="hidden md:flex items-center bg-slate-100 dark:bg-slate-800 rounded-lg px-3 py-1.5 w-64">
+<span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-400" placeholder="Search skincare..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden lg:flex items-center gap-6">
+<!-- <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Brands</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">New Arrivals</a> -->
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../kimmy_cosmetic_home_page_2/index.html">Home</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../product_listing_&_filters/code.html">Shop</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../best_seller/code.html">Best Seller</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../contact_us_&_location/code.html">Contact US</a>
+</nav>
+<div class="h-10 w-10 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="User profile avatar portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqPybpnI3gA-1Tx5ZHstuWX98CJrivxDtcBawaOjcTR2564NV7_vFgPQc2f236xjlNf6GjpjY8Qgv0KRmHeXUHg13-HAl8qWJ2DqlXVBoPJwI6qQGt9XE-kdpguqJdUSvber9qZAGmq1Lc7gF8U-1k6pUcPdplZP1y5kJMxD2m_-xfoDfAnROJ5HlDfLdFu3QJ26218JK3WJTX8_kMjat2yvxkQGlXfvrG4sqyMLnWEK5oKGs5auQPOjy33u7J3zAeLXmQGhYhZBE');"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex mb-6 text-sm font-medium">
+<a class="text-slate-500 hover:text-primary" href="#">Home</a>
+<span class="mx-2 text-slate-400">/</span>
+<span class="text-slate-900 dark:text-white">Profile</span>
+</nav>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Navigation -->
+<aside class="w-full lg:w-72 shrink-0">
+<div class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-4 mb-8">
+<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Kimmy User gold member profile image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbFqLo-6u0TMNzEtn4IJB2E7kIKw5lDMCA0ox7__ZtV54N_gMvSyIlWs5-HLAFycDFXfJtOGjTLcwa9DEPEFGBdvtutsi__21l51rEYxlLe5XaGY9kcJBql2DmwVzxGCc69ugZu5ROB0jstOE8jEnOJcekrH22T9vS77F6nXBkwjrPVKgCYVjDgBuRgZPy96WbCwLkZpNOP9EGf0lyhcJ82gROV7xAScWCFfAFOL0IOo36LCCdlmQuboqpBLSIg2htES_YqMnLd9c');"></div>
+</div>
+<div>
+<h2 class="font-bold text-slate-900 dark:text-white">Kimmy User</h2>
+<p class="text-xs font-semibold text-primary uppercase tracking-wider">Gold Member</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary text-white font-semibold" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<span>Order History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">person_outline</span>
+<span>Account Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">language</span>
+<span>Language &amp; Region</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+<span>Notifications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<span>Security</span>
+</a>
+</nav>
+<div class="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800">
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">logout</span>
+                            Logout
+                        </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 space-y-8">
+<!-- Order History Section -->
+<section class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6">
+<h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-2">Order History</h2>
+<p class="text-slate-500 text-sm">Review and track your recent skincare purchases.</p>
+</div>
+<!-- Tabs -->
+<div class="flex border-b border-slate-100 dark:border-slate-800 px-6 gap-8 overflow-x-auto">
+<button class="flex items-center border-b-2 border-primary text-primary py-4 text-sm font-bold whitespace-nowrap">
+                            All Orders
+                        </button>
+<button class="flex items-center border-b-2 border-transparent text-slate-500 hover:text-slate-900 py-4 text-sm font-bold whitespace-nowrap">
+                            Processing (1)
+                        </button>
+<button class="flex items-center border-b-2 border-transparent text-slate-500 hover:text-slate-900 py-4 text-sm font-bold whitespace-nowrap">
+                            Delivered (12)
+                        </button>
+</div>
+<!-- Order List -->
+<div class="divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Order Item 1 (Processing) -->
+<div class="p-6 hover:bg-slate-50/50 transition-colors">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+<div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-slate-900 dark:text-white">Order #KM-88293</span>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary">Processing</span>
+</div>
+<p class="text-xs text-slate-500 mt-1">Placed on Oct 24, 2023</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right">
+<p class="text-sm font-bold text-slate-900 dark:text-white">$145.00</p>
+<p class="text-[10px] text-slate-400">3 Items</p>
+</div>
+<button class="px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg hover:opacity-90 transition-opacity">Track Order</button>
+</div>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2">
+<div class="shrink-0 w-16 h-16 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 bg-cover bg-center" data-alt="Skincare bottle moisturizing cream" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDfWi07pCDGJpkOJ0fF8nE0dtgS1ib6GSKfByOCjYdzia7W2SWoQZ0_rCkbfuWcA-rzP1oIcEcs7lMKtKB3ECsCW82zOPh_z_cJDBKCI9IfXcnH-cvpPQU8_6cee6tKHv5btKn1ocsHkILPnWvaTGuy75vK7_I8Ohq-LdWWytTKrU-vfusTP3GiCeUG4z1y0oRKaDd2i65F1oEAaYkXTfITo7FB2w-IXhuWtKFO5ixz2ujoZrHwldT-2cjf7RdHFNympjU-skksjI');"></div>
+<div class="shrink-0 w-16 h-16 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 bg-cover bg-center" data-alt="Organic face serum bottle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4kHe9LQ4xcJVUT9brTkZVn16sb7MXFDODHrxHIzi30QaOMiBozC3pHyhGRlM-7fgZFJadYhyl1lZufw97RzIbfNLz5HhdjVWdsIEB83bNPCDoIZfV9dli9360UohzZ6RW31c437M07XHhVQtkNZIgJ2vL-wrf3vzLpMGdJKYdd6gk0RDsK6Bz4Gbl-CWQdNfwDUczOzUujsEUFWQ6k_zexTKc_TYqd83GIlsYuXH8j-eImp2kekFaFe6ZgBM8HHcj3WkmFlZjJME');"></div>
+<div class="shrink-0 w-16 h-16 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 bg-cover bg-center" data-alt="Premium facial cleanser product" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDX3DhmkqeRIhcwOuOt8lyQ3vb_ghkMtHHYk-Vvzug0EoAVh5sF_FouEWrd1JgcJLjJj97YpBDJyDsZuk8NnCFUOHIlrFxPcPxCiMV7GUAsdN258MMEgCog-E22YTavMU51aZfPH4TVRzLFjvoMqv9mVY06NxCTUoIsfcjtLF85c6lhPWats66jqlONGp3Cwg8HFOMauuIvf4LIUg67FjHMskPM_akAHlTWqErD9YxeYzPQnIeZ513BlrI0L1TwH8YhfHa-PEnKj1k');"></div>
+</div>
+</div>
+<!-- Order Item 2 (Delivered) -->
+<div class="p-6 hover:bg-slate-50/50 transition-colors">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+<div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-slate-900 dark:text-white">Order #KM-77120</span>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700">Delivered</span>
+</div>
+<p class="text-xs text-slate-500 mt-1">Placed on Sep 12, 2023</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right">
+<p class="text-sm font-bold text-slate-900 dark:text-white">$89.50</p>
+<p class="text-[10px] text-slate-400">1 Item</p>
+</div>
+<button class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold rounded-lg hover:bg-slate-200 transition-colors">Order Details</button>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-16 h-16 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 bg-cover bg-center" data-alt="Glow repair night cream product" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHAKRDIooBMselaIYB2rV0c4ZrPh9eQA0m2vQ0NBmBYrkeVAGOaDBZ-LD-5zrSHXq0whsVFkH9AdHdAP9w6-1zM7uF1e5Uf1vSSvPl9X2OGZqYb27EQTqXg7F3BUJJELhGQG1UzP53bUomm4l5SlAaE7kQdpyEgQ8E8ptYxLnyHyZ5VH_E7bHLrnutMS4zXw5ML4HtAkUjjuIrnc7oqu6mTAI6PNFsaT28fAiJ0ZbCZJYmkryQGBB6CSlv1SXAlt3neidFEOlWPU0');"></div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50/50 dark:bg-slate-800/20 text-center">
+<button class="text-sm font-bold text-primary hover:underline">View All Order History</button>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Localization Settings -->
+<section class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">translate</span>
+<h3 class="text-lg font-extrabold text-slate-900 dark:text-white">Language Preferences</h3>
+</div>
+<p class="text-sm text-slate-500 mb-6">Choose your preferred language for the interface and support.</p>
+<div class="space-y-3">
+<label class="relative flex items-center p-4 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer group">
+<input checked="" class="h-4 w-4 text-primary border-slate-300 focus:ring-primary" name="language" type="radio"/>
+<div class="ml-4 flex items-center justify-between w-full">
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">English (US)</p>
+<p class="text-xs text-slate-500">Default global settings</p>
+</div>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 cursor-pointer group transition-colors">
+<input class="h-4 w-4 text-primary border-slate-300 focus:ring-primary" name="language" type="radio"/>
+<div class="ml-4">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Khmer (Cambodia)</p>
+<p class="text-xs text-slate-500">ភាសាខ្មែរ - Localized support</p>
+</div>
+</label>
+</div>
+</section>
+<!-- Telegram Notifications -->
+<section class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">send_and_archive</span>
+<h3 class="text-lg font-extrabold text-slate-900 dark:text-white">Telegram Alerts</h3>
+</div>
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Real-time Order Updates</p>
+<p class="text-xs text-slate-500">Receive tracking alerts via Telegram</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+<p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Linked Account</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-[#0088cc]/10 flex items-center justify-center">
+<svg class="w-5 h-5 text-[#0088cc]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"></path></svg>
+</div>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">@kimmy_user_88</span>
+</div>
+<button class="text-xs font-bold text-primary hover:underline">Change</button>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border-2 border-dashed border-slate-200 dark:border-slate-700 text-slate-500 text-sm font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                + Connect Another Channel
+                            </button>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 py-12 bg-white dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-4">
+<div class="text-primary">
+<svg class="w-6 h-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">Kimmy Cosmetic</h2>
+</div>
+<p class="text-slate-500 text-sm max-w-sm">
+                        Premium skincare e-commerce for glowing health. Local support for Cambodia and worldwide shipping.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary" href="#">Returns</a></li>
+<li><a class="hover:text-primary" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Social</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Instagram</a></li>
+<li><a class="hover:text-primary" href="#">Telegram</a></li>
+<li><a class="hover:text-primary" href="#">Facebook</a></li>
+<li><a class="hover:text-primary" href="#">TikTok</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
+<p class="text-xs text-slate-400">© 2023 Kimmy Cosmetic. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

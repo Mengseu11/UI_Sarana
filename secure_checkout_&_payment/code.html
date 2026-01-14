@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Secure Checkout | Kimmy Cosmetic</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b8c",
+                "background-light": "#f8f6f7",
+                "background-dark": "#221019",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181114] dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-gray-100 dark:border-white/5 px-6 md:px-12 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-12">
+<a class="flex items-center gap-2 group" href="../kimmy_cosmetic_home_page_2/index.html">
+<span class="material-symbols-outlined text-3xl text-primary transition-transform group-hover:rotate-180 duration-700">flare</span>
+<h1 class="text-[#181114] dark:text-white text-2xl font-extrabold tracking-tighter uppercase">Kimmy<span class="font-light text-primary">Cosmetic</span></h1>
+</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../kimmy_cosmetic_home_page_2/index.html">Home</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../product_listing_&_filters/code.html">Shop</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../best_seller/code.html">Best Seller</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../contact_us_&_location/code.html">Contact US</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-gray-50 dark:bg-white/5 rounded-full p-1 border border-gray-100 dark:border-white/10">
+<button class="px-3 py-1 text-[10px] font-bold rounded-full bg-white dark:bg-primary text-primary dark:text-white shadow-sm transition-all">EN</button>
+<button class="px-3 py-1 text-[10px] font-bold text-gray-400 hover:text-primary">KH</button>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="relative text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+<span class="absolute -top-1 -right-1 size-3 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<button class="group flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-5 py-2.5 rounded-full hover:bg-primary dark:hover:bg-primary dark:hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+<span class="text-xs font-bold uppercase tracking-widest">Cart (2)</span>
+</button>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="../kimmy_cosmetic_home_page_1/code.html">Login</a>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 py-8">
+<!-- Breadcrumbs & Stepper -->
+<div class="mb-8">
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-[#896175] text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-[#896175] text-sm font-medium">/</span>
+<a class="text-[#896175] text-sm font-medium hover:text-primary transition-colors" href="#">Cart</a>
+<span class="text-[#896175] text-sm font-medium">/</span>
+<span class="text-primary text-sm font-bold">Checkout</span>
+</div>
+<!-- Timeline/Progress -->
+<div class="flex items-center justify-center max-w-2xl mx-auto">
+<div class="flex flex-col items-center flex-1 relative">
+<div class="z-10 bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Shipping</span>
+<div class="absolute top-5 left-1/2 w-full h-[2px] bg-primary"></div>
+</div>
+<div class="flex flex-col items-center flex-1 relative">
+<div class="z-10 bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Payment</span>
+<div class="absolute top-5 left-1/2 w-full h-[2px] bg-[#e6dbe0] dark:bg-white/10"></div>
+</div>
+<div class="flex flex-col items-center flex-1 relative">
+<div class="z-10 bg-[#e6dbe0] dark:bg-white/10 text-[#896175] w-10 h-10 rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-[#896175]">Review</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Checkout Form -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Shipping Section -->
+<section class="bg-white dark:bg-white/5 rounded-xl shadow-sm border border-[#e6dbe0] dark:border-white/10 overflow-hidden">
+<div class="p-6 border-b border-[#e6dbe0] dark:border-white/10 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<h2 class="text-xl font-bold">Where should we send your glow?</h2>
+</div>
+<div class="p-6 space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex flex-col">
+<span class="text-sm font-semibold mb-1">First Name</span>
+<input class="w-full h-12 rounded-lg border-[#e6dbe0] dark:border-white/10 dark:bg-white/5 focus:border-primary focus:ring-primary" placeholder="e.g. Sokha" type="text"/>
+</label>
+<label class="flex flex-col">
+<span class="text-sm font-semibold mb-1">Last Name</span>
+<input class="w-full h-12 rounded-lg border-[#e6dbe0] dark:border-white/10 dark:bg-white/5 focus:border-primary focus:ring-primary" placeholder="e.g. Meas" type="text"/>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex flex-col">
+<span class="text-sm font-semibold mb-1">Phone Number (Telegram linked)</span>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold">+855</span>
+<input class="w-full h-12 pl-14 rounded-lg border-[#e6dbe0] dark:border-white/10 dark:bg-white/5 focus:border-primary focus:ring-primary" placeholder="12 345 678" type="tel"/>
+</div>
+</label>
+<label class="flex flex-col">
+<span class="text-sm font-semibold mb-1">Province / City</span>
+<select class="w-full h-12 rounded-lg border-[#e6dbe0] dark:border-white/10 dark:bg-white/5 focus:border-primary focus:ring-primary">
+<option>Phnom Penh</option>
+<option>Siem Reap</option>
+<option>Sihanoukville</option>
+<option>Battambang</option>
+</select>
+</label>
+</div>
+<label class="flex flex-col">
+<span class="text-sm font-semibold mb-1">Detailed Address</span>
+<textarea class="w-full rounded-lg border-[#e6dbe0] dark:border-white/10 dark:bg-white/5 focus:border-primary focus:ring-primary" placeholder="House number, Street name, District..." rows="3"></textarea>
+</label>
+</div>
+</section>
+<!-- Payment Method Section -->
+<section class="bg-white dark:bg-white/5 rounded-xl shadow-sm border border-[#e6dbe0] dark:border-white/10 overflow-hidden">
+<div class="p-6 border-b border-[#e6dbe0] dark:border-white/10 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+<h2 class="text-xl font-bold">Payment Method</h2>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<!-- KHQR Option -->
+<div class="cursor-pointer border-2 border-primary bg-primary/5 rounded-xl p-4 flex items-center gap-4 transition-all">
+<div class="w-6 h-6 rounded-full border-4 border-primary bg-white flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="flex-1">
+<p class="font-bold">KHQR Pay</p>
+<p class="text-xs text-[#896175] dark:text-white/60">ABA, ACLEDA &amp; more</p>
+</div>
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+<img alt="KHQR Logo" class="w-10 h-10 object-contain" data-alt="Official Bakong KHQR identification logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZi1hUv7x0gp983-BsQoVnn-tg9rLc3gC2F0d25vxMP2qjo8yZ11vDwXes2_2C6LU7mvMDEdxOLp4gFulJidCMxKhu327-GxPbPiBzLCTmkIJF8l1ct9El00-YYBvOSXxuLv9HtGlyHaTX4CWlup6XNJqYGRnHCW7fAkj40woZUt1b3yx3zUGGKBXOKZi45gHyHL0yB9tJnYnkpzQ3TVQnW5gFYQf1mISvlo4Ox6dVnVH431BNUS8ELXRtrkbYWZpiZiwUDpgi0Cs"/>
+</div>
+</div>
+<!-- Card Option -->
+<div class="cursor-pointer border-2 border-[#e6dbe0] dark:border-white/10 rounded-xl p-4 flex items-center gap-4 hover:border-primary/50 transition-all">
+<div class="w-6 h-6 rounded-full border-2 border-[#e6dbe0] dark:border-white/20 bg-white"></div>
+<div class="flex-1">
+<p class="font-bold">Credit/Debit Card</p>
+<p class="text-xs text-[#896175] dark:text-white/60">Visa, Mastercard, JCB</p>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-2xl opacity-40">credit_card</span>
+</div>
+</div>
+</div>
+<!-- KHQR Interactive Area -->
+<div class="bg-background-light dark:bg-background-dark/30 rounded-xl p-8 flex flex-col items-center text-center border-2 border-dashed border-[#e6dbe0] dark:border-white/10">
+<h3 class="font-bold mb-4">Scan with any mobile banking app</h3>
+<div class="bg-white p-4 rounded-xl shadow-lg mb-6 max-w-[200px] w-full aspect-square relative group">
+<img alt="Payment QR Code" class="w-full h-full" data-alt="Dynamic KHQR payment code for scanning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCONJDP2d7OlPYJphWpFi7fabpWxHkoF9nE_lMP8Z8uVvLrimlvJdxGk2dImK-TGxqq9Gh3woFfiZVtSCNYrFNFb81Hc02iT0BrvvUiF6QVasyPzqEOygNybibfsRl1l8V4Cg-a7ZgYsHTyYnE5yBQuImZYKQJGO5j7KUiifowVvGTLrVM1jWSLRDzujoREnV4yUW9-NspBGsDUsjdWUIeBmOpMyQKavUwxiPWsX5J-2oXdQHtXz5baVzdRNTbvUXxdPbB6ijtGNNc"/>
+<div class="absolute inset-0 bg-white/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-xs font-bold text-primary">SCAN TO PAY</span>
+</div>
+</div>
+<div class="flex items-center gap-6 justify-center flex-wrap opacity-60">
+<img alt="ABA" class="h-6 object-contain" data-alt="ABA Bank logo representing local payment support" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDCHtTEK2OqD4JBixQwBWhKQbXQ-2U2eSAt8nGdvoQDjHbBxspn4SUfs0jg_ID_CELgXiVaIJAWsJvxODmni3DyKtkBdOhQ0WOo8aRvsWIIGJhmUbZOEkFUTRjE_q_FzqyTYeuIEQD96AhlMDLZ1EsilYWmz51Iy_F0856XPOcKKuWXAWs9F9hZPmYnXcfFQ624akyKYEzffP9dzQVYw4IQOAgNsQBT5jPZ13sHhxHbXdWGyfBdnC6VkHpce0817UqDPIJIL5meho"/>
+<img alt="Acleda" class="h-6 object-contain" data-alt="Acleda Bank logo representing local payment support" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYMGliCu8Z43QWsjColkCz-pbC6JJuV3SulmZPUd10kbi0Ri79FYaWeVcr71z1q2LmrxYXkK0dnMopryswR-bS_LLZvFFPtA0i5720l3KsDqz_iUeKfhEAyUPL0HLLb9YfxKRvGLCmmCiDlKlpIeS-YQwa0YVofEEBLdG5l5zZpVh3pnsu0mD9qYAyJHQpuuA2rd7xWKyqgvuEfcd7mQYSJ577l3y5sYX7EPaMKfWumT5DNW1BcHqidxTfdl5DQLgLdj-N-ZrKXWc"/>
+</div>
+<p class="mt-6 text-sm text-[#896175] dark:text-white/60 max-w-sm">
+                                The QR code will automatically update once you confirm the order.
+                            </p>
+</div>
+</div>
+</section>
+<!-- Telegram Notice -->
+<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-900/40 rounded-xl p-5 flex gap-4">
+<div class="w-12 h-12 bg-white dark:bg-white/10 rounded-full flex items-center justify-center text-blue-500 shrink-0">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"></path>
+</svg>
+</div>
+<div>
+<p class="font-bold text-blue-900 dark:text-blue-200">Stay updated via Telegram</p>
+<p class="text-sm text-blue-800 dark:text-blue-300">You will receive your receipt and real-time tracking link via Telegram once your payment is confirmed by our team.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Sticky Summary -->
+<div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
+<div class="bg-white dark:bg-white/5 rounded-xl shadow-sm border border-[#e6dbe0] dark:border-white/10 overflow-hidden">
+<div class="p-5 border-b border-[#e6dbe0] dark:border-white/10">
+<h2 class="font-bold text-lg">Order Summary</h2>
+</div>
+<div class="p-5 space-y-4">
+<!-- Items List -->
+<div class="space-y-4 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
+<div class="flex gap-3">
+<div class="w-16 h-16 bg-[#f4f0f2] rounded-lg shrink-0 overflow-hidden">
+<img alt="Radiance Serum" class="w-full h-full object-cover" data-alt="Pink glass bottle of cosmetic serum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATgU-pKRMMLTbTRGw0BqyZBXlcc1FpwVGVV3E-6jSk7AErf4rzKYuM6hZWzRkL4WCaOo_m2MoykSgclsnQY9JsqJd6htUlemnnbcZRg3phxkJXFmFeK7hkjJQ9aPqWTH0nM-4TjQD8WJ1mIgJJMMt5AwJmrX0vn4d3L0H6iN8HIQZgS4aXrIo7Jh3Ptf6C4rRxQKGkeCRviwTcIZaT4eqAre0VPMflKXIXkDGpJGT678qoUW6P4F1t13yZEzVpLfD8U0IswL6s4MA"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold leading-tight">Glow Radiance Serum 30ml</h4>
+<p class="text-xs text-[#896175] dark:text-white/60">Qty: 1</p>
+<p class="text-sm font-bold mt-1">$45.00</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-16 h-16 bg-[#f4f0f2] rounded-lg shrink-0 overflow-hidden">
+<img alt="Face Cream" class="w-full h-full object-cover" data-alt="Jar of moisturizing face cream" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ_WnfePkV-kx7qCalDMcsy3TkqWijPTbyXvhoywGgB5tVz5QWU_qpCVhuZyIEkjslQzk9O1mw4FS-KsD5lAbjqXPx4jbW2RS6eEoWTKK4Bzb7T-GAPX5R5D0X5tggue3t9rSzlho_VyrARUQ01FFQH_DqFR4cbTBkohLmqiyPQQCXW_Go_7dGxbeYValDk5cydumoGTDEAHqobOQEy1Czh8lhAm1mSvGfnaOKPXhhlcbOAVjBCl0IkJ6chaMCtKoTl0iwaQr_AJk"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold leading-tight">Velvet Hydrating Cream</h4>
+<p class="text-xs text-[#896175] dark:text-white/60">Qty: 2</p>
+<p class="text-sm font-bold mt-1">$58.00</p>
+</div>
+</div>
+</div>
+<!-- Urgency Banner -->
+<div class="bg-primary/10 border border-primary/20 rounded-lg p-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">auto_awesome</span>
+<span class="text-xs font-bold text-primary">Limited-time 15% discount applied!</span>
+</div>
+<!-- Totals -->
+<div class="border-t border-[#e6dbe0] dark:border-white/10 pt-4 space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-[#896175] dark:text-white/60">Subtotal</span>
+<span>$103.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-[#896175] dark:text-white/60">Discount (15%)</span>
+<span class="text-primary">-$15.45</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-[#896175] dark:text-white/60">Shipping</span>
+<span class="text-green-600 font-medium">FREE</span>
+</div>
+<div class="flex justify-between text-xl font-extrabold pt-2">
+<span>Total</span>
+<span>$87.55</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+                            Place Order
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-4 pt-4 opacity-40">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="material-symbols-outlined">shield</span>
+<span class="material-symbols-outlined">lock</span>
+</div>
+</div>
+</div>
+<!-- Local Support Info -->
+<div class="bg-white dark:bg-white/5 rounded-xl border border-[#e6dbe0] dark:border-white/10 p-5">
+<p class="text-xs font-bold uppercase tracking-widest text-[#896175] dark:text-white/40 mb-3">Need Help?</p>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+</div>
+<div>
+<p class="text-sm font-bold">24/7 Local Support</p>
+<p class="text-xs text-[#896175] dark:text-white/60">Live chat available in Khmer &amp; English</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 py-10 border-t border-[#e6dbe0] dark:border-white/10">
+<div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-primary grayscale opacity-50">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#181114] dark:text-white text-lg font-bold">Kimmy Cosmetic</h2>
+</div>
+<div class="flex gap-8 text-sm text-[#896175] dark:text-white/40">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Shipping Guide</a>
+</div>
+<p class="text-xs text-[#896175] dark:text-white/40">© 2024 Kimmy Cosmetic. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

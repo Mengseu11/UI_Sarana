@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login &amp; Registration | Kimmy Cosmetic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "soft-pink": "#fdf2f7",
+                        "luxury-gold": "#d4af37",
+                        "background-light": "#ffffff",
+                        "background-dark": "#1a0b12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            }
+            body {
+                font-family: 'Manrope', sans-serif;
+                @apply bg-background-light dark:bg-background-dark text-[#181114] dark:text-gray-100;
+            }
+        }
+        .form-input {
+            @apply w-full px-6 py-4 bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm;
+        }
+        .social-btn {
+            @apply flex items-center justify-center gap-3 w-full py-3.5 border border-gray-100 dark:border-white/10 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all text-xs font-bold uppercase tracking-widest;
+        }
+    </style>
+</head>
+<body class="transition-colors duration-300 antialiased overflow-hidden">
+<div class="flex min-h-screen">
+<div class="hidden lg:flex lg:w-1/2 relative bg-soft-pink overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Luxury Skincare Lifestyle" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdjTL__ZvGKmEBqiWgGVUlFgJBeLycgEMd900yLAEYMuX5QkqjNxzB1GOYeGaTFjZYl9TvKTGFqfBA-I_5RpttlcjvkkTW9lNV-_IPTO9O0398c3vjDSB4hNetVImbkJjauwojbFqSlPu0OzrYYkit7EATbLMCgYp03urR8A-ueTaAJbTpbDdPHqDcrehwtZQckgF3GaNzExQKOsVPLnc75Pn0g6BB1jaR5_1NVfxHxe3ISZgztqix4zfigdh4DIlBPDV3pCccHyg"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 p-16 flex flex-col justify-between w-full">
+<a class="flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-3xl text-primary transition-transform group-hover:rotate-180 duration-700">flare</span>
+<h1 class="text-white text-2xl font-extrabold tracking-tighter uppercase">Kimmy<span class="font-light text-primary">Cosmetic</span></h1>
+</a>
+<div class="max-w-md">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-6">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-white">Member Exclusive</span>
+</div>
+<h2 class="text-5xl font-extrabold text-white leading-tight mb-6">Start your journey to <br/><span class="italic font-light text-soft-pink">timeless radiance.</span></h2>
+<p class="text-white/80 leading-relaxed">Join our Inner Circle for personalized skincare consultations and early access to botanical breakthroughs.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD59r0xcsQYD-LPLM9kPizUaVJdWAYwEGSZuNkApP12EbyWK-ee9dCSN9t5GMSQveeebVC6xSR-aLdX28u_viMeVAwft5F-LEXQMIbCeaQyPzLSFjlimaDOpB31NhESNQ0PgQ2rzLzhMFUy_wbsWYNJdcWCab1dP2MFB5Qfs8Q11gq_QkF9mhPKV_KNm7jC2F24Txqw1Qd48VKkA7xdYIRro-6m2joCXfc-dpsFSTP5FiLswehn2FCjvUIlI7Ntpq1fFt7w9G_O6pk"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxijFj5roG1WkSgEfEyK9MGMLp5nJI7Af1zuL7NPpADUjireeI8-8hqASJ-_K9AQZRbmIi-4RsuOmWYGlYd2Lrx3_MsZwjjmltvzk_MYy5jHEbuvgzQuSvfEaQb3Pn2w2jwfnUXs0c_paj1hSFMkSlwejBKfPONsPr24VGVqPEcBIUKQZrWmGajQOj3_9MQPKFZyRvQxKUl3Roo5p91AV7_CRuJcrkKWLf1dIywaYyej_cNf5Ld7h4nqt_Kto9MdybiPaQfMtWy2s"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200 flex items-center justify-center bg-primary text-[10px] font-bold text-white">
+                            +2k
+                        </div>
+</div>
+<span class="text-xs font-bold text-white uppercase tracking-widest">Glow Community members</span>
+</div>
+</div>
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-luxury-gold/20 rounded-full blur-3xl"></div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col bg-white dark:bg-background-dark overflow-y-auto">
+<div class="p-6 md:px-12 flex justify-between lg:justify-end items-center">
+<a class="flex lg:hidden items-center gap-2" href="#">
+<span class="material-symbols-outlined text-2xl text-primary">flare</span>
+<h1 class="text-[#181114] dark:text-white text-xl font-extrabold tracking-tighter uppercase">Kimmy</h1>
+</a>
+<div class="flex items-center bg-gray-50 dark:bg-white/5 rounded-full p-1 border border-gray-100 dark:border-white/10">
+<button class="px-4 py-1.5 text-[10px] font-bold rounded-full bg-white dark:bg-primary text-primary dark:text-white shadow-sm transition-all">ENGLISH</button>
+<button class="px-4 py-1.5 text-[10px] font-bold text-gray-400 hover:text-primary transition-all">ភាសាខ្មែរ</button>
+</div>
+</div>
+<div class="flex-1 flex items-center justify-center p-6 md:p-12 lg:p-20">
+<div class="w-full max-w-md flex flex-col gap-10">
+<div class="text-center lg:text-left">
+<h3 class="text-[10px] font-bold uppercase tracking-[0.4em] text-primary mb-3">Welcome back</h3>
+<h2 class="text-4xl font-extrabold tracking-tight mb-4">Member Login</h2>
+<p class="text-gray-500 text-sm">Don't have an account? <a class="text-primary font-bold hover:underline" href="#">Create an account</a></p>
+</div>
+<form class="flex flex-col gap-5">
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-1">Email or Phone Number</label>
+<input class="form-input" placeholder="yourname@domain.com" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-1">Password</label>
+<div class="relative">
+<input class="form-input" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="relative flex items-center justify-center">
+<input class="peer appearance-none size-5 border-2 border-gray-100 dark:border-white/10 rounded-md checked:bg-primary checked:border-primary transition-all cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-white text-[16px] opacity-0 peer-checked:opacity-100 transition-opacity">check</span>
+</div>
+<span class="text-xs font-bold text-gray-500 group-hover:text-primary transition-colors uppercase tracking-wider">Remember Me</span>
+</label>
+<a class="text-[11px] font-bold text-gray-400 hover:text-primary uppercase tracking-widest transition-colors" href="#">Forgot Password?</a>
+</div>
+<a href="../user_profile_&_order_history/code.html">
+<button type="button" class="w-full py-5 bg-black dark:bg-primary text-white text-xs font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-primary dark:hover:bg-primary/90 transition-all shadow-xl shadow-primary/10 mt-2">
+    Sign In to Account
+</button>
+</a>
+</form>
+<div class="relative">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-100 dark:border-white/5"></div></div>
+<div class="relative flex justify-center text-[10px] uppercase tracking-widest font-bold">
+<span class="bg-white dark:bg-background-dark px-4 text-gray-400">Or continue with</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="social-btn">
+<img alt="Google" class="size-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsEd6uMmwX-vlyTuoRH_OLDg2PsM31SjhW5c3LuTS-9Jr3k2IwoRKTjEo9NvuB3ycL_lyPLJyf3OBHxwk-L1OHzJljiefCR8Kk29YHnFM4IccgARhJF_c7kzpJ7XSw0dQLMgOLoVxOlRQ-TdWop9weTkcjzjpVzW9nvJSA2XHMpia4VPA_hZDe20YhzRxsKhfTl9j6xEUNM796rqkYzCQih7RVtbRDKLv56EhZyTIIUMapi64D4v6XbxARXTg6EPYXRPR0z6y5YyE"/>
+<span>Google</span>
+</button>
+<button class="social-btn">
+<img alt="Facebook" class="size-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfjYtdjjg1QPeKyD6sbO8QXYcZVWr6TIHPOJW65sUSyM8LTworWY8kOqxUzG2gN1dBOwFj0RDFRbtNgVJtCLSdrUPhlY2FqrxSxeolWQZdeLcrsVZnta1COPN-CVeVq9wWl8Zopm_nZnO6A5wfG64gOMtg4PgREAvxvyuYRO1cMVQ_cIUK3uwL4yexuio_NELBAd6kDs3BKd4UbzevESQAkZ4oVwVLD00akvCRGPgBflijufvFCd4pE-8ownru_89IEgIVjbedl5s"/>
+<span>Facebook</span>
+</button>
+</div>
+<div class="mt-4 p-6 bg-soft-pink/50 dark:bg-white/5 rounded-2xl border border-primary/10 text-center">
+<p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Looking to join? <span class="font-bold text-primary">New users</span> receive a complimentary glow kit with their first order of $50+.
+                            <br/>
+<a class="inline-block mt-3 px-6 py-2 bg-white dark:bg-background-dark border border-primary/20 rounded-full text-[10px] font-bold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-all" href="#">Register Now</a>
+</p>
+</div>
+</div>
+</div>
+<div class="p-8 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[9px] text-gray-400 font-bold uppercase tracking-widest">© 2024 Kimmy Cosmetic</p>
+<div class="flex gap-6">
+<a class="text-[9px] text-gray-400 font-bold uppercase tracking-widest hover:text-primary" href="#">Support</a>
+<a class="text-[9px] text-gray-400 font-bold uppercase tracking-widest hover:text-primary" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
